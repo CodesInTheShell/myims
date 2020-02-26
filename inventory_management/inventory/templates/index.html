@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+	<div class="jumbotron text-center" id="banner">
+		<h1><a href="{% url 'index' %}" id="logo_head">Your IMS</a></h1>
+		<p>Inventory Management System</p>
+    </div>
+
+	<br>
+
+	<div id="login_div">
+
+		<div>
+		<form method="POST" action="{% url 'user_login'%}">
+			{% csrf_token %}
+			<table id="login_table">
+				<tr>
+					<td><i class="fas fa-user"></i> <label for="username">Username:</label></td>
+					<td><input type="text" name="username" id="username"></td>
+				</tr>
+				<tr>
+					<td><i class="fas fa-unlock"></i> <label for="password">Password:</label></td>
+					<td><input type="password" name="password" id="password"></td>
+				</tr>
+				<p>{{error}}</p>
+			</table>
+			<button id="login_btn" type="submit">Login</button>
+			
+		</form>
+		</div>
+		
+	</div>
+
+{% endblock %}

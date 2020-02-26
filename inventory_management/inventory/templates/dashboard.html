@@ -1,0 +1,47 @@
+{% extends 'base_dashboard.html' %}
+
+
+	{% block dashpanel %}
+
+				<h1>Dashboard</h1> 
+
+<div class="row">
+
+	<div class="col-sm-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+	  <div class="card-header">Reports</div>
+	  <div class="card-body">
+	    <h5 class="card-title">Inventory reports</h5>
+	    <p class="card-text">Reports of inventory.</p>
+	    <a href="#"><button class="btn btn-warning">Check report</button></a>
+	  </div>
+	</div>
+
+	</div>
+
+	<div class="col-sm-4">
+		<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Notifications</div>
+		  <div class="card-body">
+		    <h5 class="card-title">You have 7 notifications.</h5>
+		    <p class="card-text">Review your notification.</p>
+		    <a href="#"><button class="btn btn-warning">Review</button></a>
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-sm-4">
+		<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Sales</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Sales reports</h5>
+		    <p class="card-text">Your sales is getting high.</p>
+		    <a href="#"><button class="btn btn-warning">Check sales</button></a>
+		  </div>
+		</div>
+	</div>
+
+</div>
+
+	{% endblock %}
+

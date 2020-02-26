@@ -1,0 +1,39 @@
+{% extends 'base_dashboard.html' %}
+
+
+{% block dashpanel %}
+
+<div>
+
+	<h3>EDIT ITEM</h3>
+
+	<br>
+
+	{% if messages %}
+	  {% for msg in messages %}
+	    <div class="alert alert-{{msg.tags}} alert-dismissable">
+	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><!-- &times; --></button>
+	      {{msg.message}}
+	    </div>
+	  {% endfor %}
+	{% endif %}
+
+	<form method='POST'>
+
+		{% csrf_token %}
+
+		{% for field in form %}
+		<div class="form-group row">
+			<label for="id_{{field.name}}" class="col-2 col-form-label">{{field.label}}</label>	
+			<div class="col-10">
+				{{field}}
+			</div>
+		</div>
+		{% endfor %}
+		<button type="submit" class="btn btn-primary" name="button">Save changes</button>
+		
+	</form>
+	
+</div>
+
+{% endblock%}
